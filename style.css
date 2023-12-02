@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightgray: hsl(212, 45%, 89%);
+    --grayishblue: hsl(220, 15%, 55%);
+    --darkblue: hsl(218, 44%, 22%);
+}
+
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: var(--lightgray);
+    font-family: 'Outfit';
+    font-size:15px;
+    margin:0;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    color:var(--darkblue);
+    font-weight: 700;
+    margin:0;
+}
+
+h4{
+    text-align: center;
+    color:var(--grayishblue);
+    font-weight:400;
+    margin:0;
+}
+
+.container{
+    overflow:hidden;
+    padding: 1em;
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    background-color: var(--white);
+
+}
+
+.qrcode{
+    border-radius: 1em;
+    content: url(images/image-qr-code.png);
+}
+
+.qr-description{
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-evenly;
+    padding: 20px 15px;
+
+}
+
+@media screen and (min-width: 375px){
+
+    .container{
+        width: 80%;
+    }
+    
+    .qr-description{
+        padding: 15px 0px;
+    }
+    .qr-description >h2.main{
+        margin: 0px 0px;
+        
+    }
+
+    .qr-description > h4.sub{
+        margin:0px 2px;
+        
+    }
+
+}
+
+@media screen and (min-width: 800px){
+
+    .container{
+        width: 20%;
+    }
+    
+    .qr-description >h2.main{
+        margin: 0px 0px;
+        
+    }
+
+    .qr-description > h4.sub{
+        margin:0px 2px;
+        
+    }
+}
